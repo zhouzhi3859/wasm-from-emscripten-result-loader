@@ -1,4 +1,8 @@
 # CPP to WASM Webpack Loader
+![](https://img.shields.io/badge/version-0.0.1-green.svg?)
+[![](https://img.shields.io/badge/nodejs->=8.0-green.svg?)](https://nodejs.org/en/)
+[![](https://img.shields.io/badge/npm->=5.4-blue.svg)](https://www.npmjs.com/)
+![](https://img.shields.io/badge/license-MIT-000000.svg)
 
 Load wasm and glue js source files directly into javascript with a zero bloat. \
 The module refers to the [cpp-wasm-loader](https://github.com/ClickSimply/cpp-wasm-loader), thanks for those source code.
@@ -50,11 +54,11 @@ extern "C"
 ```asciidoc
   emcc --bind ./add.cc -s WASM=1 -o ./add.js -std=c++11 --bind
 ```
-note: ```-o {path}/{name}.js``` is Required
+note: ```-s WASM=1 -o {path}/{name}.js``` is Required
 
 **main.js**
 ```js
-const wasm = require("./add.wasm");
+import wasm from './add.wasm';
 wasm.init((imports) => {
 	// custom javascript function that can be called from C;
 	imports._sub = (a, b) => a - b;
