@@ -3,7 +3,7 @@
   "description": "Webpack loader that transforms wasm and glue js source files into javascript bundles.",
   "author": "zhi.zhou",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "wasm",
     "webpack",
@@ -13,6 +13,7 @@
     "memory",
     "emscripten"
   ],
+  "homepage": "https://github.com/zhouzhi3859/wasm-from-emscripten-result-loader",
   "repository": {
     "type": "git",
     "url": "Webpack loader that transforms wasm and glue js source files into javascript bundles."
