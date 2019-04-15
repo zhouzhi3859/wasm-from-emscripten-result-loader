@@ -3,25 +3,10 @@
 const _options = require('./options');
 
 const _bluebird = require('bluebird');
-const cp = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const tmp = require('tmp');
-const rimraf = require('rimraf');
-const md5 = require("md5");
 
-const tmpDir = _bluebird.promisify(tmp.dir);
 const readFile = _bluebird.promisify(fs.readFile);
-const writeFile = _bluebird.promisify(fs.writeFile);
-const unlink = (fileName) => {
-	return new Promise((res, rej) => {
-		fs.unlink(fileName, (err) => {
-			res();
-		});
-	});
-}
-const execFile = _bluebird.promisify(cp.execFile);
-const rf = _bluebird.promisify(rimraf);
 
 function minimalEnv(memoryClass) {
 	return `
@@ -104,7 +89,7 @@ function minimalEnv(memoryClass) {
 }
 
 function wasmLoader(fetchFiles, wasmArray, wasmEnv, wasmFileName, memoryJS) {
-	
+
 
 	return `
 		var instanceCallback;
@@ -274,7 +259,7 @@ exports.default = async function loader(content) {
 		const inputFile = `input${path.extname(this.resourcePath)}`;
 
 		// folder = await tmpDir();
-		
+
 		// write source to tmp directory
 		// await writeFile(path.join(folder, inputFile), content);
 
@@ -288,7 +273,7 @@ exports.default = async function loader(content) {
 		let wasmEnv = "";
 		let wasmContent = "";
 		let wasmFileName = this.resourcePath.split(/\\|\//gmi).pop().split(".").shift() + ".wasm";
-		
+
 
     const wasmFile = wasmBuildName;
     wasmContent = await readFile(path.join(this.context, wasmFile));
