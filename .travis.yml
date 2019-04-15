@@ -6,6 +6,6 @@ before_deploy: "npm run build"
 deploy:
   provider: npm
   email: "zhouzhi073859@outlook.com"
-  api_key: "0e92209c-52fa-4beb-a0c0-72478c9cd0cf"
+  api_key: "20e3a46d-644d-46bc-af2b-8ff423b24f8b"
   on:
     branch: master
