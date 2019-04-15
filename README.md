@@ -1,5 +1,5 @@
-# CPP to WASM Webpack Loader
-![](https://img.shields.io/badge/version-0.0.3-green.svg?)
+# WASM Webpack Loader
+![](https://img.shields.io/badge/version-0.0.4-green.svg?)
 [![](https://img.shields.io/badge/nodejs->=8.0-green.svg?)](https://nodejs.org/en/)
 [![](https://img.shields.io/badge/npm->=5.4-blue.svg)](https://www.npmjs.com/)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
