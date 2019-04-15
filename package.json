@@ -20,6 +20,7 @@
   "main": "src/cjs.js",
   "scripts": {
     "dev": "webpack-dev-server --config example/webpack.config.js --inline --progress --hot",
+    "test": "echo 1",
     "build": "tsc -p tsconfig.json && mv mem/index.js src/mem.js"
   },
   "dependencies": {
