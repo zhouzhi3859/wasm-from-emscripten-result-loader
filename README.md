@@ -32,7 +32,7 @@ resolve: {
 ```
 
 ## Minimal Example
-You can also view a complete working example on github [here](https://github.com/ClickSimply/cpp-wasm-loader/tree/master/example).
+You can also view a complete working example on github [here](https://github.com/zhouzhi3859/wasm-from-emscripten-result-loader/tree/master/example).
 
 **add.c**
 ```c
