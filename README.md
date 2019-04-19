@@ -1,5 +1,5 @@
 # WASM Webpack Loader
-![](https://img.shields.io/badge/version-0.0.8-green.svg?)
+![](https://img.shields.io/badge/version-0.0.9-green.svg?)
 ![npm](https://img.shields.io/npm/dw/wasm-from-emscripten-result-loader.svg)
 [![](https://img.shields.io/badge/nodejs->=8.0-green.svg?)](https://nodejs.org/en/)
 [![](https://img.shields.io/badge/npm->=5.4-blue.svg)](https://www.npmjs.com/)
@@ -56,7 +56,7 @@ extern "C"
 ```
 ### Build
 ```asciidoc
-  emcc --bind ./add.cc -s WASM=1 -o ./add.js -std=c++11 --bind
+  emcc ./add.cc -s WASM=1 -o ./add.js -std=c++11 --bind
 ```
 note: ```-s WASM=1 -o {path}/{name}.js``` is Required
 
