@@ -1,3 +1,7 @@
+# 0.0.10 4/18/2019
+- fix package.json
+
+
 # 0.0.9 4/18/2019
 - fix redame.md
 
