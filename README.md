@@ -1,5 +1,5 @@
 # WASM Webpack Loader
-![](https://img.shields.io/badge/version-0.0.9-green.svg?)
+![](https://img.shields.io/badge/version-0.0.10-green.svg?)
 ![npm](https://img.shields.io/npm/dw/wasm-from-emscripten-result-loader.svg)
 [![](https://img.shields.io/badge/nodejs->=8.0-green.svg?)](https://nodejs.org/en/)
 [![](https://img.shields.io/badge/npm->=5.4-blue.svg)](https://www.npmjs.com/)
