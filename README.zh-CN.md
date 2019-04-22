@@ -8,14 +8,12 @@
 
 [![NPM](https://nodei.co/npm/wasm-from-emscripten-result-loader.png)](https://nodei.co/npm/wasm-from-emscripten-result-loader/)
 
-[中文文档](https://github.com/zhouzhi3859/wasm-from-emscripten-result-loader/blob/master/README.zh-CN.md) \
-Load wasm and glue js source files directly into javascript with a zero bloat. \
-The module refers to the [cpp-wasm-loader](https://github.com/ClickSimply/cpp-wasm-loader), thanks for those source code.
+轻量级加载wasm与胶水代码的webpack loader.\
+本模块参考了[cpp-wasm-loader](https://github.com/ClickSimply/cpp-wasm-loader)，感谢相关作者的开源。
 
-
-## Installation
-1. Run `npm i wasm-from-emscripten-result-loader --save-dev`.
-2. Add this object to the `rules` section of your webpack build:
+## 安装
+1. 运行 `npm i wasm-from-emscripten-result-loader --save-dev`.
+2. 在webpack配置文件的 `rule` 添加以下配置
 ```js
 {
   test: /\.wasm$/,
@@ -27,15 +25,15 @@ The module refers to the [cpp-wasm-loader](https://github.com/ClickSimply/cpp-wa
   ]
 }
 ```
-3. Make sure `.wasm` are in the webpack resolve object:
+3. 确定 `.wasm` 在 resolve 对象中 
 ```js
 resolve: {
   extensions: ['.js', '.wasm']
 }
 ```
 
-## Minimal Example
-You can also view a complete working example on github [here](https://github.com/zhouzhi3859/wasm-from-emscripten-result-loader/tree/master/example).
+## 示例
+参考[点击这里](https://github.com/zhouzhi3859/wasm-from-emscripten-result-loader/tree/master/example).
 
 **add.c**
 ```c
@@ -54,7 +52,7 @@ extern "C"
 
 }
 ```
-### Build c++ source code
+### 使用emcc编译c++源码
 ```asciidoc
   emcc ./add.cc -s WASM=1 -o ./add.js -std=c++11 --bind
 ```
