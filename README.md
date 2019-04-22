@@ -1,5 +1,5 @@
 # WASM Webpack Loader
-![](https://img.shields.io/badge/version-0.0.13-green.svg?)
+![](https://img.shields.io/badge/version-0.0.14-green.svg?)
 ![npm](https://img.shields.io/npm/dw/wasm-from-emscripten-result-loader.svg)
 [![](https://img.shields.io/badge/nodejs->=8.0-green.svg?)](https://nodejs.org/en/)
 [![](https://img.shields.io/badge/npm->=5.4-blue.svg)](https://www.npmjs.com/)
@@ -15,7 +15,7 @@ The module refers to the [cpp-wasm-loader](https://github.com/ClickSimply/cpp-wa
 
 ## Installation
 1. Run `npm i wasm-from-emscripten-result-loader --save-dev`.
-2. Add this object to the `rules` section of your webpack build:
+2. Add this object to the `rules` section of your webpack build
 ```js
 {
   test: /\.wasm$/,
@@ -27,7 +27,7 @@ The module refers to the [cpp-wasm-loader](https://github.com/ClickSimply/cpp-wa
   ]
 }
 ```
-3. Make sure `.wasm` are in the webpack resolve object:
+3. Make sure `.wasm` are in the webpack resolve object
 ```js
 resolve: {
   extensions: ['.js', '.wasm']
